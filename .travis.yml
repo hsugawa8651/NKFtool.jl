@@ -13,7 +13,7 @@ before_install:
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install nkf; fi
 
 julia:
-  - 1.0
+  - 1.1
   - nightly
 matrix:
   allow_failures:
