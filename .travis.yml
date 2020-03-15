@@ -7,9 +7,11 @@ addons:
   apt:
     packages:
       - nkf
-  homebrew:
-    packages:
-      - brew
+
+before_install:
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update ; fi
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install nkf; fi
+
 julia:
   - 1.0
   - nightly
