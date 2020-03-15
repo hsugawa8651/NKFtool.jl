@@ -10,6 +10,7 @@ and provides the interface to use nkf from Julia.
 
 [![Build Status](https://travis-ci.com/hsugawa8651/NKFtool.jl.svg?branch=master)](https://travis-ci.com/hsugawa8651/NKFtool.jl)
 
+[![Codecov](https://codecov.io/gh/hsugawa8651/NKFtool.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/hsugawa8651/NKFtool.jl)
 
 Installation
 ------------
