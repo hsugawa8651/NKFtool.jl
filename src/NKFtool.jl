@@ -121,10 +121,9 @@ julia> open("hello_sjis.txt","w") do f
 ```
 """
 function nkf_guess(from::IO)
-    output = Pipe()
-    p=Base.open(pipeline(ignorestatus(`nkf -g`), stdin = from, stdout = output))
-    close(output.in)
-    chomp(readlines(output))
+    output = IOBuffer()
+    run(pipeline(`nkf -g`, stdin = from, stdout = output))
+    chomp(String(take!(output)))
 end
 
 
@@ -206,10 +205,9 @@ julia> open("hello_sjis.txt","w") do f
 ```
 """
 function nkf_convert(from::IO, options="-w -m0")
-    output = Pipe()
-    p=Base.open(pipeline(ignorestatus(`nkf $options`), stdin = from, stdout = output))
-    close(output.in)
-    readlines(output)
+    output = IOBuffer()
+    run(pipeline(`nkf $options`, stdin = from, stdout = output))
+    String(take!(output))
 end
 
 

@@ -2,7 +2,8 @@ using Documenter
 using NKFtool
 
 makedocs(
-    sitename = "NKFtool",
+    sitename = "NKFtool.jl",
+    author = "Hiroharu Sugawara",
     format = Documenter.HTML(lang="ja"),
     modules = [NKFtool],
     pages = [
