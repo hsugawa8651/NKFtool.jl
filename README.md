@@ -8,8 +8,9 @@ kanji (Japanese characters) code. It is the wrapper module
 to Network kanji filter, aka [nkf](https://osdn.net/projects/nkf/),
 and provides the interface to use nkf from Julia.
 
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://hsugawa8651.github.io/NKFtool.jl/stable)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://hsugawa8651.github.io/NKFtool.jl/dev)
 [![Build Status](https://travis-ci.com/hsugawa8651/NKFtool.jl.svg?branch=master)](https://travis-ci.com/hsugawa8651/NKFtool.jl)
-
 [![Codecov](https://codecov.io/gh/hsugawa8651/NKFtool.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/hsugawa8651/NKFtool.jl)
 
 Installation
