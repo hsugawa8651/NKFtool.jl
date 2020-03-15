@@ -7,6 +7,10 @@ addons:
   apt:
     packages:
       - [nkf]
+  homebrew:
+    packages:
+      - brew
+    update: true  
 julia:
   - 1.0
   - nightly
