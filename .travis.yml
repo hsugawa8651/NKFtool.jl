@@ -3,6 +3,10 @@ language: julia
 os:
   - linux
   - osx
+addons:
+  apt:
+    packages:
+      - [nkf]
 julia:
   - 1.0
   - nightly
