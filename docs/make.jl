@@ -3,7 +3,7 @@ using NKFtool
 
 makedocs(
     sitename = "NKFtool.jl",
-    author = "Hiroharu Sugawara <hsugawa@gmail.com>",
+    authors = "Hiroharu Sugawara <hsugawa@gmail.com>",
     format = Documenter.HTML(lang="ja"),
     modules = [NKFtool],
     pages = [
@@ -14,7 +14,7 @@ makedocs(
         "Library" => Any["Public"=>"lib/public.md",],
     ],
     repo="https://github.com/hsugawa8651/NKFtool.jl/blob/{commit}{path}#L{line}",
-    assets=String[],
+    #assets=String[],
 )
 
 # Documenter can also automatically deploy documentation to gh-pages.
