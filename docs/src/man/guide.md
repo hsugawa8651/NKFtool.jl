@@ -83,8 +83,11 @@ julia> String(base64decode(ans)) |> nkf_convert
 
 ## Convert a text stream
 
-The two functions `nkf_guess` and `nkf_convert` accept
-input text stream for the first argument.
+`nkf_guess` function accepts input text stream for the first argument.
+
+`nkf_convert` function also accepts
+input text stream for the first argument,
+which returns the output text stream.
 
 See the following code using [`nkf_guess(from::IO)`](@ref)
 to guess the encoding of a text file.
