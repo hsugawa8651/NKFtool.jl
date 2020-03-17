@@ -1,11 +1,9 @@
 
 # 利用ガイド
 
-
 ## 概観
 
 ![NKF-outline](../NKFtool-outline.jpeg)
-
 
 ## インストール
 
@@ -31,8 +29,6 @@ Julia のパッケージ・マネージメントシステムを用いて nkf を
 ```
     (v1.1) pkg> add NKFtool
 ```
-
-
 
 ## 文字列のエンコードを変換する
 
