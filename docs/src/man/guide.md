@@ -1,6 +1,11 @@
 
 # Guide
 
+## Overview
+
+![NKF-outline](../NKFtool-outline.jpeg)
+
+
 ## Installation
 
 ### nkf
@@ -25,13 +30,8 @@ To install NKFtool using Julia's packaging system, enter Julia's package manager
     (v1.1) pkg> add NKFtool
 ```
 
-## Overview
-
-![NKF-outline](../NKFtool-outline.jpeg)
-
 
 ## Convert a string
-
 
 The `nkf` command can guess the encoding of Japanese texts.
 
@@ -83,7 +83,6 @@ julia> nkf_convert( raw"こんにちわ", "-j") |> base64encode
 julia> String(base64decode(ans)) |> nkf_convert
 "こんにちわ"
 ```
-
 
 ## Convert a text stream
 
