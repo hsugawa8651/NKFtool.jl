@@ -1,11 +1,12 @@
 # NKFtool
 
-NKFtool: Julia package for converting kanji code using nkf
+NKFtool: Julia package for converting encodings in Japanese texts using nkf
 ====================================
 
 NKFtool is a [Julia](https://julialang.org) package for guessing and converting
-kanji (Japanese characters) code. It is the wrapper module
-to Network kanji filter, aka [nkf](https://osdn.net/projects/nkf/),
+encodings in Japanese text.  This is the wrapper module
+to Network kanji (Japanese characters) filter,
+aka [nkf](https://osdn.net/projects/nkf/),
 and provides the interface to use nkf from Julia.
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://hsugawa8651.github.io/NKFtool.jl/stable)
@@ -17,6 +18,19 @@ Overview
 ------------
 
 ![NKF-outline](docs/src/NKFtool-outline.jpeg)
+
+Simple usage
+
+```julia-repl
+julia> nkf_convert( raw"こんにちわ", "-s") |> nkf_guess
+"Shift_JIS"
+```
+
+Documentation
+------------
+
+- [**STABLE**](https://hsugawa8651.github.io/NKFtool.jl/stable) &mdash; **documentation of the most recently tagged version.**
+- [**DEVEL**](https://hsugawa8651.github.io/NKFtool.jl/dev) &mdash; *documentation of the in-development version.*
 
 
 Installation
@@ -30,7 +44,25 @@ To install NKFtool using Julia's packaging system, enter Julia's package manager
 
     (v1.1) pkg> add NKFtool
 
-
-Version
+Tests
 ------------
-The current package is tested with "Network Kanji Filter Version 2.1.5 (2018-12-15)"
+
+To run the tests, enter Julia's package manager with ] and run
+
+(v1.1) pkg> add NKFtool
+
+The current test codes are prepared
+for ["Network Kanji Filter Version 2.1.5 (2018-12-15)"](https://osdn.net/projects/nkf/releases/70406).
+
+Status
+------------
+The current package is tested against Julia 1.1 and above on Linux and MacOSX.
+
+
+## Contributions
+
+Contributions are very welcome, as are feature requests and suggestions. Please open an [issue](https://github.com/hsugawa8651/NKFtool.jl/issues) if you encounter any problems.
+
+## LICENSE
+
+This software is released under the MIT License, see LICENSE.
