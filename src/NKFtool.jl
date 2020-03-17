@@ -1,6 +1,4 @@
 
-__precompile__(true)
-
 """
     NKFtool
 [Julia](https://julialang.org) package to guess and convert
@@ -17,26 +15,39 @@ module NKFtool
 
 export nkf_version, nkf_help, nkf_guess, nkf_convert
 
+try
+    success(`nkf -v`)
+    global foundNKF = true
+catch
+    global foundNKF = false
+end
+
+if (!foundNKF)
+    println("NKFtool cannot be loaded: nkf is not available on this system.")
+end
+
 function __init__()
 
     try
-        success(`nkf -v`)
+        global NKF_VERSION = begin
+            output = IOBuffer()
+            run(pipeline(`nkf --version`, stdout = output))
+            String(take!(output))
+            # close(output)
+        end
     catch
-        error("NKFtool cannot be loaded: nkf is not available on this system.")
+		global NKF_VERSION = ""
     end
 
-    global NKF_VERSION = begin
-        output = IOBuffer()
-        run(pipeline(`nkf --version`, stdout = output))
-        String(take!(output))
-        # close(output)
-    end
-
-    global NKF_HELP = begin
-        output = IOBuffer()
-        run(pipeline(`nkf --help`, stdout = output))
-        String(take!(output))
-        # close(output)
+    try
+        global NKF_HELP = begin
+            output = IOBuffer()
+            run(pipeline(`nkf --help`, stdout = output))
+            String(take!(output))
+            # close(output)
+        end
+    catch
+		global NKF_HELP = ""
     end
 end
 
@@ -211,6 +222,5 @@ function nkf_convert(from::IO, options="-w -m0")
     run(pipeline(`nkf $options`, stdin = from, stdout = output))
     String(take!(output))
 end
-
 
 end # module
