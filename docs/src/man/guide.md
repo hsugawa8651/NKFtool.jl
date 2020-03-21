@@ -3,7 +3,7 @@
 
 ## Overview
 
-![NKF-outview](../NKFtool-overview.png)
+![NKFtool-overview](../NKFtool-overview.png)
 
 
 ## Installation
