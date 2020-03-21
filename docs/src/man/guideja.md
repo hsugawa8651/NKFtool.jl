@@ -3,7 +3,7 @@
 
 ## 概観
 
-![NKF-outline](../NKFtool-outline.jpeg)
+![NKFtool-overview](../NKFtool-overview.png)
 
 ## インストール
 
