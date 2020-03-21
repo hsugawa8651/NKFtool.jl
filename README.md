@@ -17,7 +17,7 @@ and provides the interface to use nkf from Julia.
 Overview
 ------------
 
-![NKF-outline](docs/src/NKFtool-overview.svg)
+![NKF-outline](docs/src/NKFtool-overview.png)
 
 Simple usage
 
