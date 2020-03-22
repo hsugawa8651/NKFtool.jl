@@ -17,9 +17,8 @@ and provides the interface to use nkf from Julia.
 Overview
 ------------
 
-![NKF-outline](docs/src/NKFtool-outline.jpeg)
+![NKF-overview](docs/src/NKFtool-overview.png]
 
-Simple usage
 
 ```julia-repl
 julia> nkf_convert( raw"こんにちわ", "-s") |> nkf_guess
