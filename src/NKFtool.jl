@@ -1,4 +1,6 @@
 
+__precompile__(true)
+
 """
     NKFtool
 [Julia](https://julialang.org) package to guess and convert
