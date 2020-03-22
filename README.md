@@ -17,7 +17,7 @@ and provides the interface to use nkf from Julia.
 Overview
 ------------
 
-![NKF-overview](docs/src/NKFtool-overview.png]
+![NKF-overview](docs/src/NKFtool-overview.png)
 
 
 ```julia-repl
