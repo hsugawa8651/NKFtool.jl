@@ -2,6 +2,9 @@
 
 Documentation for NKFtool.jl
 
+![NKF-overview](NKFtool-overview.png)
+
+
 ## Package Features
 
 * Use nkf command in your Julia program
