@@ -10,11 +10,17 @@
 
 ### nkf
 
-NKFtool requires nkf to be installed in your system.
+NKFtool requires [nkf](https://osdn.net/projects/nkf/) to be installed in your system.
 Major Unix-like operating systems offer its precompiled version
 in their package management systems.
 
-For MacOSX, nkf can be installed with Homebrew:
+For example, nkf can be installed with apt-get command for Ubuntu OS:
+
+```
+sudo apt-get install nkf`
+```
+
+or, with Homebrew for MacOSX:
 
 ```
 brew install nkf

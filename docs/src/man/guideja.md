@@ -9,11 +9,17 @@
 
 ### nkf
 
-NKFtool を使うシステムには、nkf コマンドがインストール済でなければなりません。
+NKFtool を使うシステムには、[nkf](https://osdn.net/projects/nkf/) コマンドがインストール済でなければなりません。
 Unix 類似のオペレーティングシステム（OS）の多くでは、
 OS付属のパッケージマネージメントシステムからインストールできます。
 
-MacOSX では、Homebrew を用いてインストールできます。
+例えば、Ubuntu Linux では、apt-get コマンドを用います。
+
+```
+sudo apt-get install nkf
+```
+
+MacOSX では、Homebrew を用います。
 
 ```
 brew install nkf
@@ -23,7 +29,7 @@ brew install nkf
 
 NKFtoolは、Julia 1.0 以上が必要です。
 
-Julia のパッケージ・マネージメントシステムを用いて nkf をインストールするには、
+Julia のパッケージ・マネージメントシステムを用いて NKFtool をインストールするには、
 `]` を打鍵しパッケージマネージメントを起動してから、以下を実行します。
 
 ```
