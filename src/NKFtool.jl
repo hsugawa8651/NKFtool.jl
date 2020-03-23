@@ -147,7 +147,7 @@ end
 
 Convert the input string `from` to the encoding
 specified by the option directive `options`,
-and return the output text stream,
+and return the output text string,
 which is just the result of the command line `echo <from> | nkf <options>`.
 
 
@@ -200,7 +200,7 @@ end
 
 Convert the input stream `from` to the encoding
 specified by the option directive `options`,
-and return the output text stream,
+and return the output text string,
 which is just the result of the command line `cat <from> | nkf <options>`
 
 # Arguments

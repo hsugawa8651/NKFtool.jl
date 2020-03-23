@@ -71,6 +71,7 @@ only one of `-j` (ISO-2022-JP), `-s` (Shift\_JIS),
 `-e` (EUC-JP) and `-w` (UTF-8), should be specified.
 The input encoding option, only one of `-J`, `-S`, `-E` and `-W`, may be specified if you know the encoding of the input string `from`.
 
+`nkf_convert` function returns the output text string.
 Because in Julia strings in the encoding other than UTF-8 are not printable ,
 it is a good practice to encode them to printable characters with e.g. `Base64.base64encode()`, as follows:
 
@@ -89,8 +90,7 @@ julia> String(base64decode(ans)) |> nkf_convert
 `nkf_guess` function accepts input text stream for the first argument.
 
 `nkf_convert` function also accepts
-input text stream for the first argument,
-which returns the output text stream.
+input text stream for the first argument.
 
 See the following code using [`nkf_guess(from::IO)`](@ref)
 to guess the encoding of a text file.
